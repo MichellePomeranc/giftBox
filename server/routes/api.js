@@ -14,14 +14,12 @@ router.get("/breakfast", function(req, res){
         res.send(parsedResponse)})
 })
 
-// let user1 = new users({name: "michelle", points: 500})
-// user1.save()
-
-
-// // Get cities in the DB and send it to the client
-// router.get('/cities', (req, res)=>{
-//     City.find({}).then(cities=>res.send(cities))
-// })
-
+//store gifts in db 
+router.post('/cart',function(req,res){
+    let data=req.body
+    console.log(data)
+    let gift=new gifts(data)
+    gift.save()
+})
 
 module.exports = router

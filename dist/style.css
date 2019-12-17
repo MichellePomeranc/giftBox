@@ -7,11 +7,71 @@ body{
     background:#eee;
 }
 
-.img{
+.header{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
     width: 100%;
-    height: 600px;
-    background: url('https://images.unsplash.com/photo-1512418490979-92798cec1380?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')  ;
 }
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vH;
+    background-color: rgb(255, 255, 255);
+}
+
+.name{
+    font-size: 25px;
+    font-weight: bold;
+    display: grid;
+    margin-top: 200px;
+    min-height: 40px;
+}
+
+#details{
+    max-width: 400px;
+    margin-left: 50px;
+}
+
+.details{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.price{
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#buy {
+    font-size: 30px;
+    background-color: rgb(199, 19, 19);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+
+}
+
+#imgTitle{
+    background-image: url('https://images.unsplash.com/photo-1508614874708-a0adf94d4c33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80');
+}
+
+#imgTitle>img{
+    display: grid;
+    max-height: 70vH;
+    max-width: 300px;
+    display: right;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 150px;
+}
+
+
 nav>ul{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -37,8 +97,8 @@ span{
 }
 
 nav>ul>li>img{
-        height: 70px;
-        width: 70px;
+        height: 50px;
+        width: 50px;
         border-radius: 50%;
         border-color:wheat;
         border-style:solid;
@@ -58,13 +118,13 @@ nav>ul>li>img{
 }
 .logo{
     font-family: 'Abel', sans-serif;
-    color:#fff;
-    font-size: 30px;
+    color:rgb(153, 17, 17);
+    font-size: 40px;
 }
 
 #providers-container{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     }
 
 #provider-container{
@@ -74,24 +134,25 @@ nav>ul>li>img{
   justify-content: center;
 }
 
-#name{
-    display: grid;
-    padding: 15px;
-    text-align: center; 
-}
-
 #img{
     display: grid;
-    width:256px;
-    height: 256px;
+    width:180px;
+    height:180px;
     align-content: center;
     justify-content: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
+    transition: transform .2s;
+}
+
+#img:hover {
+        -ms-transform: scale(0.85); 
+        -webkit-transform: scale(0.85); 
+        transform: scale(0.85); 
 }
 #address{
+    min-height: 50px; 
     display: grid;
     padding: 15px;
   text-align: center;
