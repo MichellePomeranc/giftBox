@@ -26,7 +26,6 @@ class TempManager {
     } 
 
     async toBuy(category){
-
         await  $.post('/cart', category, function(err){
             console.log("all-Good")
         })
