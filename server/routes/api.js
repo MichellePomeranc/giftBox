@@ -23,20 +23,32 @@ router.get("/breakfast", function(req, res){
 })
 
 //store gifts in db 
-router.post('/cart',function(req,res){
+router.post('/cart',async function(req,response){
     let data=req.body
     console.log(data)
     let gift=new gifts(data)
-
     gift.save()
-    // users.find({} ,function(result){
-    //     console.log(result)
-    // })
-    users.
-    findOne({ name: 'Michelle' }, function(err,results){
+    await users.
+    findOne({ name: 'Michelle'}, function(err,results){
         results.gifts.push(gift)
         results.save()
     })
+    users.findOne({})
+    .populate( 'gifts')
+    .exec(function (err, res) {
+        if(res.gifts[0]==null && res.credit>gift.price){
+            res.credit= res.credit-gift.price
+            res.save();
+        }
+        else if(res.credit-res.gifts[res.gifts.length-1].price>0){
+        res.credit= res.credit-res.gifts[res.gifts.length-1].price
+        res.save();
+        }
+        else{
+            response.send("0")
+        }
+    })
+
 
 })
 

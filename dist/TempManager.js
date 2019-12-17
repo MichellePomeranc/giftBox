@@ -22,8 +22,10 @@ class TempManager {
         }
     }
     async toBuy(category) {
-        await $.post('/cart', category, function (err) {
-            console.log("all-Good")
-        })
+        let x =await $.post('/cart',category);
+        console.log(x)
+        if(x=="0"){
+            alert("You Dont Have enungh money")
+        }
+        }
     }
-}
