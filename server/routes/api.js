@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const Subcategories = require('../model/gift')
-const Experiences = require('../model/providers')
-const Category = require('../model/users')
+const gifts = require('../model/gift')
+const providers = require('../model/providers')
+const users = require('../model/users')
 const request = require('request')
 const apiKeyPlaces = "AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4"
 
@@ -13,6 +13,9 @@ router.get("/breakfast/:providers", function(req, res){
         console.log(parsedResponse)
         res.send(parsedResponse)})
 })
+
+// let user1 = new users({name: "michelle", points: 500})
+// user1.save()
 
 
 // // Get cities in the DB and send it to the client
