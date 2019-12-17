@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Subcategories = require('../model/gifts')
+const Subcategories = require('../model/gift')
 const Experiences = require('../model/providers')
 const Category = require('../model/users')
 const request = require('request')

@@ -6,5 +6,5 @@ const userSchema = new Schema({
     points: Number
 })
 
-const User = mongoose.model("User", citySchema)
+const User = mongoose.model("User", userSchema)
 module.exports = User

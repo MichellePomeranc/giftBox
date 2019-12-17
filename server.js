@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 const api = require('./Server/routes/api')
-const gifts = require("./Server/model/Gifts.js")
-const providers = require("./Server/model/poviders.js")
+const gifts = require("./Server/model/gift.js")
+const providers = require("./Server/model/providers.js")
 const users = require("./Server/model/users.js")
 
 const path = require('path')
