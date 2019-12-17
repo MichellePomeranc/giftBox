@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gift-Box</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel
+    |Montserrat|Patua+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- font-family: 'Patua One', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Abel', sans-serif; -->
+</head>
+<body>
+    <div class="img">
+        <div class="container">
+            <div class="header">
+                <nav>
+                    <ul>
+                        <li><button class="contact">My Gifts</button></li>
+                        <li class="logo">GiftBox</li>
+                        <li><img src="index.jpg" alt=""><span>Points:</span></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+
+        <div class="categories">
+            <img src="" alt="">
+            <div>Bonjour:</div>
+            <div>This GiftBox for two people offers the posibility
+                 to choose and enjoy the most exquisite breakfast
+                  and teas around the city</div>
+                  <i class="fas fa-user"></i>
+                <div class="price">Price:99₪</div>
+                <button>Buy it</button>
+        </div>
+        <div id='providers'></div>
+
+    </div>
+
+    
+    
+
+    <script id="dynamic" type="text/x-handlebars-template">
+        {{#each allCityData}}
+        <div id='provider'>
+            <div id='name'>{{name}}</div>
+            <img src={{conditionPic}} id="img">
+            <div id='address'></div>
+            <div id="map"></div>
+            <div id="rating"></div>
+        </div>
+        {{/each}}
+            
+        </script>
+</body>
+</html>
