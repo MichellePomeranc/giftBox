@@ -5,6 +5,7 @@ const GiftSchema = new Schema({
     name: String,
     provider: [{type: Schema.Types.ObjectId, ref: 'Provider'}],
     price: Number,
+    picture: String
 })
 
 const Gift = mongoose.model("Gift", GiftSchema)

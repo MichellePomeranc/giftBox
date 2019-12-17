@@ -4,7 +4,9 @@ const Schema = mongoose.Schema
 const providerSchema = new Schema({
     name: String,
     address: String,
-    map: String 
+    map: String,
+    picture: String,
+    rating: Number
 })
 
 const Provider = mongoose.model("Provider", providerSchema)
