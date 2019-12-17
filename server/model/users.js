@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema({
     name: String,
-    points: Number,
+    credit: Number,
     gifts: [{type: Schema.Types.ObjectId, ref: 'Gift'}],
 })
 
