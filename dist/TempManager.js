@@ -1,6 +1,6 @@
 class TempManager {
     constructor() {
-        this.giftsData = []
+        this.providers = []
     }
 
     async getDataFromDB() {
@@ -10,16 +10,24 @@ class TempManager {
     }
 
     async getBreakfastData(providers) {
-        let data = await $.get(`/breakfast/${providers}`)
-        this.providers.push({
-            name: data.name,
-            address: data.formatted_address,
-            map: this.data.geometry/location,
-            picture: this.photo,
-            rating: this.rating
-    })
-    console.log(providers)
+        let data = await $.get(`/breakfast`)
+        console.log(data)
+        for(let r of data.results){
+            let provider={name: r.name,
+                address: r.formatted_address,
+                picture:`https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${r.photos[0].photo_reference}&key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4`,
+                 rating: r.rating}
+        
+                this.providers.push(provider)
+      }
+       console.log(this.providers[0].picture)
+
+    console.log(this.providers)
     } 
+
+    async toBuy(category){
+        
+    }
 
 //     async saveCity(cityName){
 //         for(let c of this.cityData){

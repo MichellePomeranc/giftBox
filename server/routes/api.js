@@ -7,7 +7,7 @@ const request = require('request')
 const apiKeyPlaces = "AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4"
 
 // Get providers - breakfast
-router.get("/breakfast/:providers", function(req, res){
+router.get("/breakfast", function(req, res){
     request(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=breakfast+tel+aviv&key=${apiKeyPlaces}`, (err, response) => {
         const parsedResponse = JSON.parse(response.body)
         console.log(parsedResponse)

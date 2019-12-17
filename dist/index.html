@@ -36,26 +36,32 @@ font-family: 'Abel', sans-serif; -->
                   and teas around the city</div>
                   <i class="fas fa-user"></i>
                 <div class="price">Price:99₪</div>
-                <button>Buy it</button>
+                <button id="buy">Buy it</button>
         </div>
-        <div id='providers'></div>
+        <div id='providers-container'></div>
 
     </div>
 
     
     
 
-    <script id="dynamic" type="text/x-handlebars-template">
-        {{#each allCityData}}
-        <div id='provider'>
+    <script id="container-template" type="text/x-handlebars-template">
+        {{#each providers}}
+        <div id='provider-container'>
             <div id='name'>{{name}}</div>
-            <img src={{conditionPic}} id="img">
-            <div id='address'></div>
-            <div id="map"></div>
-            <div id="rating"></div>
+            <img src={{picture}} id="img">
+            <div id='address'>{{address}}</div>
+            <!-- <div id="map"></div> -->
+            <div id="rating">{{rating}}<i class="fas fa-star"></i></div>
         </div>
         {{/each}}
             
         </script>
+
+        <script src="/handlebars/dist/handlebars.js"></script>
+        <script src="/jquery/dist/jquery.js"></script>
+        <script src="Renderer.js"></script>
+        <script src="TempManager.js"> </script>
+        <script src="main.js"> </script>
 </body>
 </html>
