@@ -11,14 +11,14 @@ class TempManager {
 
     async getBreakfastData(providers) {
         let data = await $.get(`/breakfast/${providers}`)
-        this.cityData.push({
+        this.providers.push({
             name: data.name,
             address: data.formatted_address,
-            // map: data.initMap(),
-            // picture: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+            map: this.data.geometry/location,
+            picture: this.photo,
             rating: this.rating
     })
-    console.log(this.cityData)
+    console.log(providers)
     } 
 
 //     async saveCity(cityName){
@@ -43,4 +43,4 @@ class TempManager {
 //         let index = this.cityData.findIndex(c => c.name == cityName) 
 //         this.cityData.splice(index,1)
 //     }
-// }
+}
