@@ -26,7 +26,9 @@ font-family: 'Abel', sans-serif; -->
                 </ul>
             </nav>
         </div>
-
+        <div class="dropDownContainer">
+            <div class="dropDown"></div>
+            </div>
         <div class="category">
             <div id="imgTitle">
                 <img src="https://images.unsplash.com/photo-1515215316771-2742baa337f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=60"
@@ -48,22 +50,27 @@ font-family: 'Abel', sans-serif; -->
     <div id="options">Where can you go?</div>
     <div id='providers-container'></div>
 
-
+    
     <script id="container-template" type="text/x-handlebars-template">
         {{#each providers}}
         <div id='provider-container'>
             <div id='name'>{{name}}</div>
             <img src={{picture}} id="img">
             <div id='address'>{{address}}</div>
-            <!-- <div id="map">
-                <input type="hidden" name="lng" id="lng" value="{{lng}}">
-                <input type="hidden" name="lat" id="lat" value="{{lat}}">
-                <a href="initMap()">click</a>
-            </div>  -->
             <div id="rating">{{rating}}<i class="fas fa-star"></i></div>
         </div>
         {{/each}}
     </script>
+    
+    <script id="container-dropDown" type="text/x-handlebars-template">
+        {{#each products}}
+        <ul id='drop-container'>
+            <li id='name'>{{name}}</li>
+            <li id='price'>{{price}}</li>
+        </span>
+        {{/each}}
+    </script>
+
     <div id="footer"></div>
     <!-- <script async defer 
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4&callback=initMap">

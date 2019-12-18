@@ -6,15 +6,10 @@ const loadPage = async function () {
      renderer.renderData(tempManager.providers)
 }
 
-// function initMap() {
-//     var longitude = $("#lng").val();
-//     var latitude  = $("#lat").val();              
-//     map = new google.maps.Map(document.getElementById('map'), {
-//         center: {lat: latitude, lng: longitude},
-//         zoom: 8
-//     });
-// }
-
+$('.myGifts').on('click', function(){ 
+    tempManager.showMyGifts("Michelle")
+    
+})
 
 
 $('.categories').on('click','#buy', function(){
@@ -30,5 +25,6 @@ $('.categories').on('click','#buy', function(){
     }
     tempManager.toBuy(buy)
 })
+
 
     loadPage()

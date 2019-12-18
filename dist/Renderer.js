@@ -6,4 +6,10 @@ class Renderer {
         let newHTML = template( {providers} );
         $('#providers-container').empty().append(newHTML);
     }
+    renderBuyIt(products){
+        let source = $('#container-dropDown').html();
+        let template = Handlebars.compile(source);
+        let newHTML = template({products});
+        $('.dropDown').empty().append(newHTML);
+    }
 }
