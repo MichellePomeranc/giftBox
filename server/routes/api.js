@@ -30,8 +30,8 @@ router.post('/cart',async function(req,response){
     .populate( 'gifts')
     .exec(async function (err, res) {
 
+        let gift=new gifts(data)
         if(res.gifts[0]==null && res.credit>gift.price){
-            let gift=new gifts(data)
             gift.save()
             await users.
             findOne({ name: 'Michelle'}, function(err,results){
@@ -56,6 +56,13 @@ router.post('/cart',async function(req,response){
             response.send("0")
         }
     
+    })
+})
+
+router.get("/getMyGiftDB/:userName", async function(req, res){
+    let myGifts= await users.find({name : req.params.userName}).populate("gifts").exec(function(err, result){
+    // console.log(result)
+    res.send(result)
     })
 })
 

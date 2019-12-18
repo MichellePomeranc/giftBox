@@ -18,16 +18,22 @@ class TempManager {
                 picture: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${r.photos[0].photo_reference}&key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4`,
                 rating: r.rating,
                 lng: r.geometry.location.lng,
-                lat:r.geometry.location.lat
+                lat: r.geometry.location.lat
             }
             this.providers.push(provider)
         }
     }
     async toBuy(category) {
-        let x =await $.post('/cart',category);
+        let x = await $.post('/cart', category);
         console.log(x)
-        if(x=="0"){
+        if (x == "0") {
             alert("You Dont Have enungh money")
         }
-        }
     }
+
+    showMyGifts = async function (userName) {
+        let myGift = await $.get(`/getMyGiftDB/${userName}`)
+        console.log(myGift)
+
+    }
+}

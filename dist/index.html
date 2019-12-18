@@ -5,71 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gift-Box</title>
+    <title>GiftBox</title>
     <link href="https://fonts.googleapis.com/css?family=Abel
     |Montserrat|Patua+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- font-family: 'Patua One', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Abel', sans-serif; -->
+    <link rel="stylesheet" href="styleLanding.css">
 </head>
 
 <body>
-    <div class="img">
-        <div class="header">
-            <nav>
-                <ul>
-                    <li><button class="contact">My Gifts</button></li>
-                    <li class="logo">GiftBox</li>
-                    <li><img src="index.jpg" alt=""></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="categories">
-            <div id="imgTitle">
-                <img src="https://images.unsplash.com/photo-1515215316771-2742baa337f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=60" alt="">
-            </div>
-            <div id="details">
-                <div class="name">Bonjour:</div>
-                <div class="details">This GiftBox for two people offers the posibility
-                    to choose and enjoy the most exquisite breakfast
-                    and teas around the city.</div>
-                <i class="fas fa-user"></i><i class="fas fa-user"></i>
-                <div class="price">Price: <span id='shekels'>99</span> ₪</div>
-                <button id="buy">Buy it</button>
-            </div>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><button class="myGifts">My Gifts</button></li>
+                <li class="logo">GiftBox</li>
+                <li><img src="index.jpg" alt=""></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="mainTitle">
+        <div class="video">
+            <video loop muted autoplay>
+                <source src="https://web-bigbox.storage.googleapis.com/uploads/home/cover/fd32f19d-301f-4fa3-bc55-6184443aa7fa.mp4" type="video/mp4">
+            </video>
+            <div class="overlay">The happiness of giving</div>
+            <div class="subtitle">Because seeing ours happy makes us very happy.</div>
         </div>
     </div>
+    <div id=categories>
+        <button id="foodie" onclick="location.href = './gift.html';">FOODIE</button>
+        <button id="relax">RELAX</button>
+        <button id="adventure">ADVENTURE</button>
     </div>
-    <div id='providers-container'></div>
-
-
-    <script id="container-template" type="text/x-handlebars-template">
-        {{#each providers}}
-        <div id='provider-container'>
-            <div id='name'>{{name}}</div>
-            <img src={{picture}} id="img">
-            <div id='address'>{{address}}</div>
-            <!-- <div id="map">
-                <input type="hidden" name="lng" id="lng" value="{{lng}}">
-                <input type="hidden" name="lat" id="lat" value="{{lat}}">
-                <a href="initMap()">click</a>
-            </div>  -->
-            <div id="rating">{{rating}}<i class="fas fa-star"></i></div>
-        </div>
-        {{/each}}
-            
-        </script>
-        <!-- <script async defer 
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4&callback=initMap">
-    </script> -->
-    <script src="/handlebars/dist/handlebars.js"></script>
-    <script src="/jquery/dist/jquery.js"></script>
-    <script src="Renderer.js"></script>
-    <script src="TempManager.js"> </script>
-    <script src="main.js"> </script>
+    <div id="footer"></div>
 </body>
 
 </html>
