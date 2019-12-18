@@ -100,7 +100,7 @@ nav>ul>li>img{
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        border-color:wheat;
+        border-color:rgb(153, 17, 17);
         border-style:solid;
 }
 
@@ -120,6 +120,8 @@ nav>ul>li>img{
     border-radius: 5px;
     color: black;
     right: 0;
+    border-color:rgb(153, 17, 17);
+    border-style:solid;
 }
 
 .logo{
