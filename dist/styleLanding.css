@@ -42,6 +42,10 @@ nav>ul>li>img{
         border-style:solid;
 }
 
+#giftbox:hover{
+    cursor: pointer;
+}
+
 #mainTitle {
     top: 0;
     right: 0;
@@ -136,7 +140,8 @@ nav>ul>li>img{
 }
 
 #foodie:hover{
-    filter:opacity(100%)
+    filter:opacity(100%);
+    cursor: pointer;
 }
 
 #relax{
@@ -153,7 +158,8 @@ nav>ul>li>img{
 }
 
 #relax:hover{
-    filter:opacity(100%)
+    filter:opacity(100%);
+    cursor: pointer;
 }
 
 
@@ -171,7 +177,8 @@ nav>ul>li>img{
 }
 
 #adventure:hover{
-    filter:opacity(100%)
+    filter:opacity(100%);
+    cursor: pointer;
 }
 
 /* 

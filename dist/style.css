@@ -104,6 +104,11 @@ nav>ul>li>img{
         border-style:solid;
 }
 
+#giftbox:hover{
+    cursor: pointer;
+}
+
+
 .myGifts{
     width: 130px;
     height: 40px;
