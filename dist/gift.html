@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bonjour</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abel
     |Montserrat|Patua+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
@@ -20,7 +21,15 @@ font-family: 'Abel', sans-serif; -->
         <div class="header">
             <nav>
                 <ul>
-                    <li><button class="myGifts">My Gifts</button></li>
+                    <li><div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          My gifts
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          </ul>
+                        </div>   
+                    </li>                 
                     <li class="logo" id="giftbox" onclick="location.href='./index.html';">GiftBox</li>
                     <li><img src="index.jpg" alt=""></li>
                 </ul>
@@ -65,8 +74,8 @@ font-family: 'Abel', sans-serif; -->
     <script id="container-dropDown" type="text/x-handlebars-template">
         {{#each products}}
         <ul id='drop-container'>
-            <li id='name'>{{name}}</li>
-            <li id='price'>{{price}}</li>
+            <span id='name'>{{name}}</span>
+            <span id='price'>{{price}} ₪</span>
         </span>
         {{/each}}
     </script>
@@ -75,6 +84,9 @@ font-family: 'Abel', sans-serif; -->
     <!-- <script async defer 
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4&callback=initMap">
     </script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/handlebars/dist/handlebars.js"></script>
     <script src="/jquery/dist/jquery.js"></script>
     <script src="Renderer.js"></script>

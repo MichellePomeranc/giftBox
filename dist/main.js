@@ -6,13 +6,13 @@ const loadPage = async function () {
      renderer.renderData(tempManager.providers)
 }
 
-$('.myGifts').on('click', function(){ 
+$('.btn').on('click', function(){ 
     tempManager.showMyGifts("Michelle")
     
 })
 
 
-$('.categories').on('click','#buy', function(){
+$('.category').on('click','#buy', function(){
     let name=$(this).siblings('.name').text()
     let price=$(this).siblings('.price').find('#shekels').text()
     let p=parseInt(price)
