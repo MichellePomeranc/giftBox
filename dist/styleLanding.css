@@ -65,6 +65,11 @@ nav>ul>li>img{
     z-index:0;
 }
 
+#backgroundPicture {
+    display: none;
+}
+
+
 .overlay {
     position: absolute;
     display: flex;
@@ -74,18 +79,6 @@ nav>ul>li>img{
     color:#fff;
     font-family: sans-serif ;
     font-size: 85px;
-    font-weight: bold;
-}
-
-.subtitle {
-    position: absolute;
-    display: flex;
-    top:80%;
-    left:3%;
-    z-index:1;
-    color:#fff;
-    font-family: sans-serif ;
-    font-size: 20px;
     font-weight: bold;
 }
 
@@ -183,49 +176,49 @@ nav>ul>li>img{
     cursor: pointer;
 }
 
-/* 
-#providers-container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-
-#provider-container{
- grid-template-rows:repeat(3,1fr);
-  border: 1px solid #ccc;
-  align-content: center;
-  justify-content: center;
-} */
-
 #footer{
     background-color:rgb(153, 17, 17);
     width: 100vw;
     min-height: 20px;
 }
 
-@media (max-width: 768px) and (min-width: 490px) {
-    #providers-container{
-        grid-template-columns: repeat(2,1fr);
+@media (max-width: 768px) {
+
+    .overlay {
+        display: flex;
+        font-size: 30px;
     }
 
     #categories{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
         height: 100vH;
-        background-image: url('https://images.unsplash.com/photo-1508614874708-a0adf94d4c33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80');
     }
 
-    #mainTitle {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        z-index: -100;
+    #foodie{
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    #relax{
+        width: 100vw;
+        height: 100vh;
+    }   
+    
+    #adventure{
+        width: 100vw;
+        height: 100vh;
     }
     
     video {
-        max-width: 100%;
-        height: auto;          
+    display:none;
     }
-    
+
+    #backgroundPicture {
+        display: contents;
+        -ms-transform: scale(0.6); 
+        -webkit-transform: scale(0.6); 
+        transform: scale(0.6);
+
+    }
 }
