@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const GiftSchema = new Schema({
     name: String,
     price: Number,
-    picture: String
+    picture: String,
 })
 
 const Gift = mongoose.model("Gift", GiftSchema)

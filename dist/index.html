@@ -52,13 +52,19 @@ font-family: 'Abel', sans-serif; -->
             <div id='name'>{{name}}</div>
             <img src={{picture}} id="img">
             <div id='address'>{{address}}</div>
-            <!-- <div id="map"></div> -->
+            <!-- <div id="map">
+                <input type="hidden" name="lng" id="lng" value="{{lng}}">
+                <input type="hidden" name="lat" id="lat" value="{{lat}}">
+                <a href="initMap()">click</a>
+            </div>  -->
             <div id="rating">{{rating}}<i class="fas fa-star"></i></div>
         </div>
         {{/each}}
             
         </script>
-
+        <!-- <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4&callback=initMap">
+    </script> -->
     <script src="/handlebars/dist/handlebars.js"></script>
     <script src="/jquery/dist/jquery.js"></script>
     <script src="Renderer.js"></script>

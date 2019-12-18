@@ -6,7 +6,9 @@ const providerSchema = new Schema({
     address: String,
     map: String,
     picture: String,
-    rating: Number
+    rating: Number,
+    lat:Number,
+    lng:Number
 })
 
 const Provider = mongoose.model("Provider", providerSchema)

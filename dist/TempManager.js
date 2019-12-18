@@ -16,7 +16,9 @@ class TempManager {
                 name: r.name,
                 address: r.formatted_address,
                 picture: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${r.photos[0].photo_reference}&key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4`,
-                rating: r.rating
+                rating: r.rating,
+                lng: r.geometry.location.lng,
+                lat:r.geometry.location.lat
             }
             this.providers.push(provider)
         }
