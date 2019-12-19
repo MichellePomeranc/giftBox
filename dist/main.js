@@ -6,11 +6,20 @@ const loadPage = async function () {
      renderer.renderData(tempManager.providers)
 }
 
-$('.btn').on('click', function(){ 
-    tempManager.showMyGifts("Michelle")
+$('.btn').on('click', async function(){ 
+    let x= await tempManager.showMyGifts("Michelle")
+    renderer.renderBuyIt(x[0].gifts)
+    loadPage()
     
 })
 
+$('#userPic').on('click', async function(){ 
+    await show()
+})
+ const show = async() =>{
+ let x=await tempManager.showUserInfo("Michelle")
+ renderer.renderUserInfo(x)
+}
 
 $('.category').on('click','#buy', function(){
     let name=$(this).siblings('.name').text()
@@ -24,6 +33,13 @@ $('.category').on('click','#buy', function(){
         picture:picture,
     }
     tempManager.toBuy(buy)
+})
+
+$("#userInfo").on("click",'#chargeBtn', function(){
+    let input =parseInt($(this).siblings('#charge').val())
+    tempManager.updateCredit(input,"Michelle");
+    show()
+    
 })
 
 

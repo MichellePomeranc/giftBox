@@ -14,23 +14,28 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      My gifts
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      </ul>
-                    </div>   
-                </li>                 
-                <li class="logo" id="giftbox" onclick="location.href='./index.html';">GiftBox</li>
-                <li><img src="index.jpg" alt=""></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="img">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          My gifts
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          </ul>
+                        </div>   
+                    </li>                 
+                    <li class="logo" id="giftbox" onclick="location.href='./index.html';">GiftBox</li>
+                    <li><img src="index.jpg" id="userPic" alt=""></li> 
+                </ul>
+            </nav>
+            <div id="userInfo"></div>
+        </div>
+        <div class="dropDownContainer">
+            <div class="dropDown"></div>
+            </div>
     <div id="mainTitle">
         <div class="video">
             <div id="backgroundPicture"><img src="https://images.unsplash.com/photo-1525351159099-81893194469e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=746&q=80"</img></div>
@@ -46,6 +51,26 @@
         <button id="adventure">ADVENTURE</button>
     </div>
     <div id="footer"></div>
+
+    <script id="container-dropDown" type="text/x-handlebars-template">
+        {{#each products}}
+        <ul id='drop-container'>
+            <span id='name'>{{name}}</span>
+            <span id='price'>{{price}} ₪</span>
+        </span>
+        {{/each}}
+    </script>
+
+    <script id="container-userInfo" type="text/x-handlebars-template">
+        <ul id='drop-container'>
+            <span id='nameInfo'>{{name}}</span>
+            <span id='creditInfo'>{{credit}} ₪</span>
+            <div>Load Credit
+                <input type="text" aria-placeholder="How many you want to charge?" id="charge">
+                <button id=chargeBtn>Charge</button>
+            </div>
+        </span>
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

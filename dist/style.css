@@ -164,8 +164,9 @@ nav>ul>li>img{
     display: grid;
     padding-top: 5px;
     text-align: center;
-    min-height: 40px;
+    min-height: 60px;
 }
+
 
 #img{
     display: grid;
@@ -179,27 +180,34 @@ nav>ul>li>img{
     transition: transform .2s;
 }
 
+
 #img:hover {
         -ms-transform: scale(0.85); 
         -webkit-transform: scale(0.85); 
         transform: scale(0.85); 
 }
 
+#userInfo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 #address{
-    min-height: 50px; 
+    min-height: 65px; 
     display: grid;
     text-align: center;
     padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
 }
-
 #rating{
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
-    text-align: center;      
-}
+    text-align: center;
+    flex-direction: row;      
+}                    
 
 #footer{
     background-color:rgb(153, 17, 17);
@@ -255,13 +263,22 @@ nav>ul>li>img{
         display: none;    
     }
     #address{
-     min-height: auto; 
-     min-width: auto;
+        min-height: 100px; 
+        display: grid;
+        text-align: center;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     #name{
-        min-height: auto;
-        min-width: auto;
+        font-size: 16px;
+        font-weight: bold;
+        display: grid;
+        padding-top: 5px;
+        text-align: center;
+        min-height: 60px;
     }
+
     #details{
         height: auto;
         max-width: auto;
@@ -281,3 +298,14 @@ nav>ul>li>img{
     /* display: inline-block; */
     
 }
+
+
+
+
+#img:hover {
+    -ms-transform: scale(0.85); 
+    -webkit-transform: scale(0.85); 
+    transform: scale(0.85); 
+}
+
+

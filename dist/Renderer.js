@@ -10,6 +10,12 @@ class Renderer {
         let source = $('#container-dropDown').html();
         let template = Handlebars.compile(source);
         let newHTML = template({products});
-        $('.dropDown').empty().append(newHTML);
+        $('.dropdown-menu').empty().append(newHTML);
+    }
+    renderUserInfo(user){
+        let source = $('#container-userInfo').html();
+        let template = Handlebars.compile(source);
+        let newHTML = template(user);
+        $('#userInfo').empty().append(newHTML);
     }
 }

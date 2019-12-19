@@ -31,9 +31,10 @@ font-family: 'Abel', sans-serif; -->
                         </div>   
                     </li>                 
                     <li class="logo" id="giftbox" onclick="location.href='./index.html';">GiftBox</li>
-                    <li><img src="index.jpg" alt=""></li>
+                    <li><img src="index.jpg" id="userPic" alt=""></li> 
                 </ul>
             </nav>
+            <div id="userInfo"></div>
         </div>
         <div class="dropDownContainer">
             <div class="dropDown"></div>
@@ -78,6 +79,17 @@ font-family: 'Abel', sans-serif; -->
             <span id='price'>{{price}} ₪</span>
         </span>
         {{/each}}
+    </script>
+
+    <script id="container-userInfo" type="text/x-handlebars-template">
+        <ul id='drop-container'>
+            <span id='nameInfo'>{{name}}</span>
+            <span id='creditInfo'>{{credit}} ₪</span>
+            <div>Load Credit
+                <input type="text" aria-placeholder="How many you want to charge?" id="charge">
+                <button id=chargeBtn>Charge</button>
+            </div>
+        </span>
     </script>
 
     <div id="footer"></div>

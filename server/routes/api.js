@@ -22,7 +22,14 @@ router.get("/breakfast", function(req, res){
         res.send(parsedResponse)
     })
 })
-
+//get user update amount
+router.get('/user/:userName',async function(req,res){
+    let user=req.params.userName
+    users.findOne({name:user},function(err, result){
+        let userInfo={name:result.name, credit:result.credit}
+        res.send(userInfo)
+    })
+})
 //store gifts in db 
 router.post('/cart',async function(req,response){
     let data=req.body
@@ -64,6 +71,17 @@ router.get("/getMyGiftDB/:userName", async function(req, res){
     // console.log(result)
     res.send(result)
     })
+})
+
+router.post('/user/:userName/:input',async function(req,res){
+    let user=req.params.userName
+    let charge=parseInt(req.params.input)
+    console.log(charge)
+    users.findOne({name:user},function(err, result){
+            result.credit+=charge
+            result.save()
+    })
+    res.send("The credit is updated")
 })
 
 

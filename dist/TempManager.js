@@ -33,7 +33,16 @@ class TempManager {
 
     showMyGifts = async function (userName) {
         let myGifts = await $.get(`/getMyGiftDB/${userName}`)
-        console.log(myGifts)
-        renderer.renderBuyIt(myGifts[0].gifts)
+        return myGifts
+        
+    }
+
+    async showUserInfo(userName){
+        let data= await $.get(`/user/${userName}`)
+        return data
+    }
+    async updateCredit(input,userName){
+        let credit=await $.post(`/user/${userName}/${input}`)
+        return credit
     }
 }
